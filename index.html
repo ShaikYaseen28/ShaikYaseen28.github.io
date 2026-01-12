@@ -4,61 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shaik Mohammed Yaseen | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0f172a;color:#e5e7eb;line-height:1.6}
-    header{padding:60px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#22d3ee)}
-    header h1{font-size:42px;font-weight:700}
-    header p{font-size:18px;margin-top:10px}
-    section{padding:60px 12%;}
-    h2{font-size:30px;margin-bottom:20px;color:#38bdf8}
-    .card{background:#020617;padding:25px;border-radius:14px;margin-bottom:25px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-    .skills span{display:inline-block;background:#1e293b;padding:10px 16px;border-radius:20px;margin:6px;font-size:14px}
-    .projects h3{color:#22d3ee}
-    footer{text-align:center;padding:30px;background:#020617}
-    a{color:#facc15;text-decoration:none;font-weight:600}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+    body{background:linear-gradient(135deg,#120024,#2b0040,#001f2d);color:#f8fafc}
+    a{text-decoration:none}
+
+    /* HERO */
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:radial-gradient(circle at top,#7c3aed,#1f0036);
+      text-align:center;
+      padding:40px 20px;
+    }
+    header h1{font-size:52px;font-weight:700}
+    header h1 span{color:#facc15}
+    header p{font-size:20px;margin:15px 0 25px;color:#cbd5f5}
+    .hero-links a{
+      display:inline-block;
+      margin:10px;
+      padding:12px 26px;
+      border-radius:30px;
+      font-weight:600;
+      background:linear-gradient(135deg,#f97316,#facc15);
+      color:#1f2937;
+      transition:.3s
+    }
+    .hero-links a.secondary{
+      background:transparent;
+      border:2px solid #facc15;
+      color:#facc15
+    }
+    .hero-links a:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 10px 25px rgba(250,204,21,.4)}
+
+    section{padding:90px 10%;transition:.35s ease}
+section:hover h2{letter-spacing:1px;transform:scale(1.03)}
+    h2{font-size:36px;margin-bottom:35px;color:#f97316;text-align:center}
+
+    .card{
+      background:#0f0020;
+      padding:30px;
+      border-radius:18px;
+      margin-bottom:30px;
+      box-shadow:0 20px 40px rgba(0,0,0,.6);
+      transition:.35s ease
+    }
+    .card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 30px 60px rgba(249,115,22,.35)
+    }
+    }
+
+    /* ABOUT */
+    .about{max-width:900px;margin:auto;text-align:center;font-size:18px;color:#cbd5f5;transition:.35s ease}
+.about:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(249,115,22,.35);background:#140028;padding:30px;border-radius:18px}
+
+    /* SKILLS */
+    .skills{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+    .skills span{
+      background:#0f172a;
+      padding:12px 18px;
+      border-radius:25px;
+      font-weight:500;
+      color:#e5e7eb;
+      transition:.3s ease
+    }
+    .skills span:hover{
+      transform:translateY(-6px) scale(1.08);
+      background:linear-gradient(135deg,#f97316,#facc15);
+      color:#1f2937;
+      box-shadow:0 12px 30px rgba(250,204,21,.45)
+    }
+
+    /* PROJECTS */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+    .projects-grid h3{color:#facc15;margin-bottom:10px}
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      background:#020617;
+      color:#94a3b8
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Shaik Mohammed Yaseen</h1>
-  <p>Computer Science Engineer | Java Developer | UI/UX Enthusiast</p>
-  <p><a href="mailto:ysyseens03@gmail.com">ysyaseen03@gmail.com</a> · <a href="https://github.com/ShaikYaseen28" target="_blank">GitHub</a></p>
+  <div>
+    <h1>Hi, I'm <span>Yaseen</span></h1>
+    <p>Computer Science Engineer · Java Developer · UI/UX Enthusiast</p>
+    <div class="hero-links">
+      <a href="mailto:ysyaseen03@gmail.com">Email Me</a>
+      <a href="https://github.com/ShaikYaseen28" target="_blank" class="secondary">GitHub</a>
+    </div>
+  </div>
 </header>
 
 <section>
   <h2>About Me</h2>
-  <div class="card">
-    <p>I am a Computer Science Engineering student with strong foundations in Java, SQL, and UI/UX designing. I enjoy building secure, scalable applications and have hands-on experience through internships and academic projects.</p>
+  <div class="about">
+    <p>I am a Computer Science Engineering student passionate about building secure, scalable software solutions. With hands-on experience in Java development and cybersecurity-focused projects, I enjoy solving real-world problems with clean and user-friendly designs.</p>
   </div>
 </section>
 
 <section>
-  <h2>Technical Skills</h2>
-  <div class="card skills">
-    <span>Java</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>SQL</span>
+    <span>MySQL</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    
   </div>
 </section>
 
-<section class="projects">
+<section>
   <h2>Projects</h2>
-  <div class="card">
-    <h3>Secure Hire</h3>
-    <p>A secure recruitment platform focusing on data protection, role-based access, and usability.</p>
-  </div>
-  <div class="card">
-    <h3>Library Management System</h3>
-    <p>Java-based application to manage books, users, issuing, returning, and tracking operations.</p>
-  </div>
-  <div class="card">
-    <h3>Phishing Detector</h3>
-    <p>A tool that classifies websites as Safe, Suspicious, or Phishing and maintains scan history.</p>
-  </div>
-  <div class="card">
-    <h3>Secure Code Analyzer</h3>
-    <p>Static analysis tool to detect insecure coding practices like weak cryptography and unsafe inputs.</p>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>Secure Hire</h3>
+      <p>Recruitment platform focusing on role-based access control, data privacy, and usability.</p>
+    </div>
+    <div class="card">
+      <h3>Library Management System</h3>
+      <p>Java-based system to manage books, users, issuing, returning, and tracking efficiently.</p>
+    </div>
+    <div class="card">
+      <h3>Phishing Detector</h3>
+      <p>Tool that classifies websites as Safe, Suspicious, or Phishing with scan history.</p>
+    </div>
+    <div class="card">
+      <h3>Secure Code Analyzer</h3>
+      <p>Static analysis tool to detect insecure coding patterns and vulnerabilities.</p>
+    </div>
   </div>
 </section>
 
@@ -67,15 +152,15 @@
   <div class="card">
     <h3>Java Developer Intern – Stable Code</h3>
     <p><strong>June 2025 – July 2025</strong></p>
-    <p>Worked on Java-based projects, independently designing and implementing scalable solutions.</p>
+    <p>Developed Java applications independently and contributed to scalable, secure software solutions.</p>
   </div>
 </section>
 
 <section>
   <h2>Certifications</h2>
   <div class="card">
-    <ul>
-      <li>Certified in Cybersecurity – Fortinet</li>
+    <ul style="line-height:1.9;color:#cbd5f5">
+      <li>Cybersecurity – Fortinet</li>
       <li>Ethical Hacking 101 – Infosys Springboard</li>
       <li>HTML, CSS & JavaScript</li>
       <li>Soft Skill Development – NPTEL</li>
@@ -84,7 +169,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Shaik Mohammed Yaseen</p>
+  <p>© 2026 Shaik Mohammed Yaseen · Portfolio</p>
 </footer>
 
 </body>
